@@ -4,7 +4,9 @@ import pandas as pd
 
 st.title('うつ症状チェックシート')
 
+
 st.subheader('設問ごとに、あてはまるもの、近いものをひとつ選択してください。')
+
 st.write('')
 
 question1 = st.radio(
