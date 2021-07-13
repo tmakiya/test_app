@@ -4,9 +4,9 @@ import pandas as pd
 
 st.title('うつ症状チェックシート')
 
+st.sidebar.title('うつ症状チェックシート')
 
 st.subheader('設問ごとに、あてはまるもの、近いものをひとつ選択してください。')
-
 st.write('')
 
 question1 = st.radio(
@@ -27,7 +27,7 @@ elif question1 == '寝つくのに６０分以上かかったことが、（１�
 else:
     score1 = 9999999
 
-st.write('設問１の点数',score1)
+st.sidebar.write('設問１の点数',score1)
 
 st.write('')
 
@@ -49,7 +49,7 @@ elif question2 == '毎晩１回以上目が覚め、そのまま２０分以上�
 else:
     score2 = 9999999
 
-st.write('設問２の点数',score2)
+st.sidebar.write('設問２の点数',score2)
 
 st.write('')
 
@@ -71,7 +71,7 @@ elif question3 == '起きなくてはならない時間よりも１時間以上�
 else:
     score3 = 9999999
 
-st.write('設問３の点数',score3)
+st.sidebar.write('設問３の点数',score3)
 
 st.write('')
 
@@ -93,11 +93,11 @@ elif question4 == '２４時間のうち、昼寝を含めて１２時間以上�
 else:
     score4 = 9999999
 
-st.write('設問４の点数',score4)
+st.sidebar.write('設問４の点数',score4)
 
 score1_4 = max([score1,score2,score3,score4])
 
-st.write('設問１ー４の点数：',score1_4)
+st.sidebar.write('設問１ー４の点数：',score1_4)
 
 st.write('')
 
@@ -119,7 +119,7 @@ elif question5 == 'ほとんどすべての時間、悲しいと感じている�
 else:
     score5 = 9999999
 
-st.write('設問５の点数',score5)
+st.sidebar.write('設問５の点数',score5)
 
 st.write('')
 
@@ -141,7 +141,7 @@ elif question6 == 'まる１日（２４時間）ほとんどものを食べず�
 else:
     score6 = 9999999
 
-st.write('設問６の点数',score6)
+st.sidebar.write('設問６の点数',score6)
 
 st.write('')
 
@@ -163,7 +163,7 @@ elif question7 == '食事の時も、食事と食事の間も、食べ過ぎる�
 else:
     score7 = 9999999
 
-st.write('設問７の点数',score7)
+st.sidebar.write('設問７の点数',score7)
 
 st.write('')
 
@@ -185,7 +185,7 @@ elif question8 == '２キロ以上やせた。':
 else:
     score8 = 9999999
 
-st.write('設問８の点数',score8)
+st.sidebar.write('設問８の点数',score8)
 
 st.write('')
 
@@ -207,11 +207,11 @@ elif question9 == '２キロ以上太った。':
 else:
     score9 = 9999999
 
-st.write('設問９の点数',score9)
+st.sidebar.write('設問９の点数',score9)
 
 score6_9 = max([score6,score7,score8,score9])
 
-st.write('設問６ー９の点数：',score6_9)
+st.sidebar.write('設問６ー９の点数：',score6_9)
 
 st.write('')
 
@@ -233,7 +233,7 @@ elif question10 == 'ものを読むこともじゅうぶんにできなかった
 else:
     score10 = 9999999
 
-st.write('設問１０の点数',score10)
+st.sidebar.write('設問１０の点数',score10)
 
 st.write('')
 
@@ -255,7 +255,7 @@ elif question11 == '自分の大小の欠陥について、ほとんど常に考
 else:
     score11 = 9999999
 
-st.write('設問１１の点数',score11)
+st.sidebar.write('設問１１の点数',score11)
 
 st.write('')
 
@@ -277,7 +277,7 @@ elif question12 == '自殺や死について１日に何回か細部にわたっ
 else:
     score12 = 9999999
 
-st.write('設問１２の点数',score12)
+st.sidebar.write('設問１２の点数',score12)
 
 st.write('')
 
@@ -299,7 +299,7 @@ elif question13 == '以前好んでいた活動に、ほとんどまったく興
 else:
     score13 = 9999999
 
-st.write('設問１３の点数',score13)
+st.sidebar.write('設問１３の点数',score13)
 
 st.write('')
 
@@ -321,7 +321,7 @@ elif question14 == 'ただエネルギーがないという理由だけで、日
 else:
     score14 = 9999999
 
-st.write('設問１４の点数',score14)
+st.sidebar.write('設問１４の点数',score14)
 
 st.write('')
 
@@ -343,7 +343,7 @@ elif question15 == '最大の努力をしないと、質問に答えられない
 else:
     score15 = 9999999
 
-st.write('設問１５の点数',score15)
+st.sidebar.write('設問１５の点数',score15)
 
 st.write('')
 
@@ -365,49 +365,46 @@ elif question16 == 'ときどき、座っていられなくて歩き回らずに
 else:
     score16 = 9999999
 
-st.write('設問１６の点数',score16)
+st.sidebar.write('設問１６の点数',score16)
 
 score15_16 = max([score15,score16])
 
-st.write('設問１５ー１６の点数：',score15_16)
+st.sidebar.write('設問１５ー１６の点数：',score15_16)
 
 total_score = score1_4+score5+score6_9+score10+score11+score12+score13+score14+score15_16
 
-st.write('合計点数(0-27点)',total_score)
+st.sidebar.write('合計点数(0-27点)',total_score)
 
-st.write('評価テーブル')
+st.sidebar.write('評価テーブル')
 df = pd.DataFrame({
     '点数区分':['0-5','6-10','11-15','16-20','21-27'],
     '結果':['正常','軽度','中等度','重度','きわめて重度']
 })
 
-st.dataframe(df)
+st.sidebar.dataframe(df)
 
-st.subheader("チェック結果")
+st.sidebar.subheader("チェック結果")
 message = '6点以上の場合にはうつ病の傾向が疑われます。気になる状態が続く場合は医療機関に相談してください。'
 medical_link = '[医療機関検索のリンク先](https://www.qlifeweb.jp/utsunoitami/)'
 counseling_link = '[カウンセリング予約サイトのリンク先](https://outlook.office365.com/owa/calendar/Bookings@kyowayakuhin.co.jp/bookings/)'
 
 if total_score>=0 and total_score<=5:
-    st.write('あなたのうつ症状は正常です。')
+    st.sidebar.write('あなたのうつ症状は正常です。')
 elif total_score>=6 and total_score<=10:
-    st.write('あなたのうつ症状は軽度です。',message)
-    st.markdown(medical_link)
-    st.markdown(counseling_link)
+    st.sidebar.write('あなたのうつ症状は軽度です。',message)
+    st.sidebar.markdown(medical_link)
+    st.sidebar.markdown(counseling_link)
 elif total_score>=11 and total_score<=15:
-    st.write('あなたのうつ症状は中等度です。',message)
-    st.markdown(medical_link)
-    st.markdown(counseling_link)
+    st.sidebar.write('あなたのうつ症状は中等度です。',message)
+    st.sidebar.markdown(medical_link)
+    st.sidebar.markdown(counseling_link)
 elif total_score>=16 and total_score<=20:
-    st.write('あなたのうつ症状は重度です。',message)
-    st.markdown(medical_link)
-    st.markdown(counseling_link)
+    st.sidebar.write('あなたのうつ症状は重度です。',message)
+    st.sidebar.markdown(medical_link)
+    st.sidebar.markdown(counseling_link)
 elif total_score>=21 and total_score<=27:
-    st.write('あなたのうつ症状はきわけて重度です。',message)
-    st.markdown(medical_link)
-    st.markdown(counseling_link)
+    st.sidebar.write('あなたのうつ症状はきわけて重度です。',message)
+    st.sidebar.markdown(medical_link)
+    st.sidebar.markdown(counseling_link)
 else:
-    st.write('ロジックエラー')
-
-
-
+    st.sidebar.write('ロジックエラー')
