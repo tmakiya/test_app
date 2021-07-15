@@ -333,30 +333,30 @@ score15_16 = max([score15,score16])
 
 total_score = score1_4+score5+score6_9+score10+score11+score12+score13+score14+score15_16
 
-st.sidebar.write('合計点数(0-27点):',total_score)
+st.write('合計点数(0-27点):',total_score)
 
-st.sidebar.subheader("チェック結果")
+st.subheader("チェック結果")
 message = '6点以上の場合にはうつ病の傾向が疑われます。気になる状態が続く場合は医療機関に相談してください。'
 medical_link = '[医療機関検索のリンク先](https://www.qlifeweb.jp/utsunoitami/)'
 counseling_link = '[カウンセリング予約サイトのリンク先](https://outlook.office365.com/owa/calendar/Bookings@kyowayakuhin.co.jp/bookings/)'
 
 if total_score>=0 and total_score<=5:
-    st.sidebar.write('あなたのうつ症状は正常です。')
+    st.write('あなたのうつ症状は正常です。')
 elif total_score>=6 and total_score<=10:
-    st.sidebar.write('あなたのうつ症状は軽度です。',message)
-    st.sidebar.markdown(medical_link)
-    st.sidebar.markdown(counseling_link)
+    st.write('あなたのうつ症状は軽度です。',message)
+    st.markdown(medical_link)
+    st.markdown(counseling_link)
 elif total_score>=11 and total_score<=15:
-    st.sidebar.write('あなたのうつ症状は中等度です。',message)
-    st.sidebar.markdown(medical_link)
-    st.sidebar.markdown(counseling_link)
+    st.write('あなたのうつ症状は中等度です。',message)
+    st.markdown(medical_link)
+    st.markdown(counseling_link)
 elif total_score>=16 and total_score<=20:
-    st.sidebar.write('あなたのうつ症状は重度です。',message)
-    st.sidebar.markdown(medical_link)
-    st.sidebar.markdown(counseling_link)
+    st.write('あなたのうつ症状は重度です。',message)
+    st.markdown(medical_link)
+    st.markdown(counseling_link)
 elif total_score>=21 and total_score<=27:
-    st.sidebar.write('あなたのうつ症状はきわけて重度です。',message)
-    st.sidebar.markdown(medical_link)
-    st.sidebar.markdown(counseling_link)
+    st.write('あなたのうつ症状はきわけて重度です。',message)
+    st.markdown(medical_link)
+    st.markdown(counseling_link)
 else:
-    st.sidebar.write('ロジックエラー')
+    st.write('ロジックエラー')
