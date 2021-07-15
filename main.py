@@ -4,8 +4,6 @@ import pandas as pd
 
 st.title('うつ症状チェックシート')
 
-st.sidebar.title('うつ症状チェックシート')
-
 st.subheader('設問ごとに、あてはまるもの、近いものをひとつ選択してください。')
 st.write('')
 
@@ -27,8 +25,6 @@ elif question1 == '寝つくのに６０分以上かかったことが、（１�
 else:
     score1 = 9999999
 
-st.sidebar.write('設問１の点数',score1)
-
 st.write('')
 
 question2 = st.radio(
@@ -48,8 +44,6 @@ elif question2 == '毎晩１回以上目が覚め、そのまま２０分以上�
     score2 = 3
 else:
     score2 = 9999999
-
-st.sidebar.write('設問２の点数',score2)
 
 st.write('')
 
@@ -71,8 +65,6 @@ elif question3 == '起きなくてはならない時間よりも１時間以上�
 else:
     score3 = 9999999
 
-st.sidebar.write('設問３の点数',score3)
-
 st.write('')
 
 question4 = st.radio(
@@ -93,11 +85,7 @@ elif question4 == '２４時間のうち、昼寝を含めて１２時間以上�
 else:
     score4 = 9999999
 
-st.sidebar.write('設問４の点数',score4)
-
 score1_4 = max([score1,score2,score3,score4])
-
-st.sidebar.write('設問１ー４の点数：',score1_4)
 
 st.write('')
 
@@ -119,8 +107,6 @@ elif question5 == 'ほとんどすべての時間、悲しいと感じている�
 else:
     score5 = 9999999
 
-st.sidebar.write('設問５の点数',score5)
-
 st.write('')
 
 question6 = st.radio(
@@ -140,8 +126,6 @@ elif question6 == 'まる１日（２４時間）ほとんどものを食べず�
     score6 = 3
 else:
     score6 = 9999999
-
-st.sidebar.write('設問６の点数',score6)
 
 st.write('')
 
@@ -163,8 +147,6 @@ elif question7 == '食事の時も、食事と食事の間も、食べ過ぎる�
 else:
     score7 = 9999999
 
-st.sidebar.write('設問７の点数',score7)
-
 st.write('')
 
 question8 = st.radio(
@@ -184,8 +166,6 @@ elif question8 == '２キロ以上やせた。':
     score8 = 3
 else:
     score8 = 9999999
-
-st.sidebar.write('設問８の点数',score8)
 
 st.write('')
 
@@ -207,11 +187,7 @@ elif question9 == '２キロ以上太った。':
 else:
     score9 = 9999999
 
-st.sidebar.write('設問９の点数',score9)
-
 score6_9 = max([score6,score7,score8,score9])
-
-st.sidebar.write('設問６ー９の点数：',score6_9)
 
 st.write('')
 
@@ -233,8 +209,6 @@ elif question10 == 'ものを読むこともじゅうぶんにできなかった
 else:
     score10 = 9999999
 
-st.sidebar.write('設問１０の点数',score10)
-
 st.write('')
 
 question11 = st.radio(
@@ -254,8 +228,6 @@ elif question11 == '自分の大小の欠陥について、ほとんど常に考
     score11 = 3
 else:
     score11 = 9999999
-
-st.sidebar.write('設問１１の点数',score11)
 
 st.write('')
 
@@ -277,8 +249,6 @@ elif question12 == '自殺や死について１日に何回か細部にわたっ
 else:
     score12 = 9999999
 
-st.sidebar.write('設問１２の点数',score12)
-
 st.write('')
 
 question13 = st.radio(
@@ -298,8 +268,6 @@ elif question13 == '以前好んでいた活動に、ほとんどまったく興
     score13 = 3
 else:
     score13 = 9999999
-
-st.sidebar.write('設問１３の点数',score13)
 
 st.write('')
 
@@ -321,8 +289,6 @@ elif question14 == 'ただエネルギーがないという理由だけで、日
 else:
     score14 = 9999999
 
-st.sidebar.write('設問１４の点数',score14)
-
 st.write('')
 
 question15 = st.radio(
@@ -342,8 +308,6 @@ elif question15 == '最大の努力をしないと、質問に答えられない
     score15 = 3
 else:
     score15 = 9999999
-
-st.sidebar.write('設問１５の点数',score15)
 
 st.write('')
 
@@ -365,23 +329,11 @@ elif question16 == 'ときどき、座っていられなくて歩き回らずに
 else:
     score16 = 9999999
 
-st.sidebar.write('設問１６の点数',score16)
-
 score15_16 = max([score15,score16])
-
-st.sidebar.write('設問１５ー１６の点数：',score15_16)
 
 total_score = score1_4+score5+score6_9+score10+score11+score12+score13+score14+score15_16
 
-st.sidebar.write('合計点数(0-27点)',total_score)
-
-st.sidebar.write('評価テーブル')
-df = pd.DataFrame({
-    '点数区分':['0-5','6-10','11-15','16-20','21-27'],
-    '結果':['正常','軽度','中等度','重度','きわめて重度']
-})
-
-st.sidebar.dataframe(df)
+st.sidebar.write('合計点数(0-27点):',total_score)
 
 st.sidebar.subheader("チェック結果")
 message = '6点以上の場合にはうつ病の傾向が疑われます。気になる状態が続く場合は医療機関に相談してください。'
