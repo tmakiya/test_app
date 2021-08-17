@@ -4,8 +4,7 @@ import pandas as pd
 
 st.title('うつ症状チェックシート')
 
-st.write('うつ病チェックを簡易抑うつ症状尺度（QIDS -J）を使って行いましょう。')
-st.write('設問ごとに、あてはまるもの、近いものをひとつ選択してください。')
+st.subheader('うつ病チェックを簡易抑うつ症状尺度（QIDS -J）を使って行いましょう。設問ごとに、あてはまるもの、近いものをひとつ選択してください。')
 st.write('')
 
 question1 = st.radio(
