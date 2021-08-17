@@ -336,27 +336,33 @@ total_score = score1_4+score5+score6_9+score10+score11+score12+score13+score14+s
 st.write('合計点数(0-27点):',total_score)
 
 st.subheader("チェック結果")
-message = '6点以上の場合にはうつ病の傾向が疑われます。気になる状態が続く場合は医療機関に相談してください。'
-medical_link = '[医療機関検索のリンク先](https://www.qlifeweb.jp/utsunoitami/)'
+message = '6点以上の場合にはうつ病の傾向が疑われます。チェックシートの結果のみで正確な診断をすることはできません。結果の如何にかかわらず不安がある場合には、カウンセラーもしくは専門の医師にに相談してください。'
 counseling_link = '[カウンセリング予約サイトのリンク先](https://outlook.office365.com/owa/calendar/Bookings@kyowayakuhin.co.jp/bookings/)'
+medical_link = '[医療機関検索のリンク先](https://www.qlifeweb.jp/utsunoitami/)'
+
+セルフチェックの結果のみで正確に診断することはできません。
+結果の如何にかかわらず不安がある場合には、専門の医師に相談してください。
 
 if total_score>=0 and total_score<=5:
     st.write('あなたのうつ症状は正常です。')
 elif total_score>=6 and total_score<=10:
     st.write('あなたのうつ症状は軽度です。',message)
-    st.markdown(medical_link)
     st.markdown(counseling_link)
+    st.markdown(medical_link)
 elif total_score>=11 and total_score<=15:
     st.write('あなたのうつ症状は中等度です。',message)
-    st.markdown(medical_link)
     st.markdown(counseling_link)
+    st.markdown(medical_link)
 elif total_score>=16 and total_score<=20:
     st.write('あなたのうつ症状は重度です。',message)
-    st.markdown(medical_link)
     st.markdown(counseling_link)
+    st.markdown(medical_link)
 elif total_score>=21 and total_score<=27:
     st.write('あなたのうつ症状はきわけて重度です。',message)
-    st.markdown(medical_link)
     st.markdown(counseling_link)
+    st.markdown(medical_link)
 else:
     st.write('ロジックエラー')
+
+st.write('厚生労働省ホームページ「QIDS-J解説」を参考にチャックシートを作成しております')
+st.markdown('[厚生労働省ホームページ「QIDS-J解説」](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/kokoro/index.html)')
