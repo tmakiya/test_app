@@ -336,12 +336,9 @@ total_score = score1_4+score5+score6_9+score10+score11+score12+score13+score14+s
 st.write('合計点数(0-27点):',total_score)
 
 st.subheader("チェック結果")
-message = '6点以上の場合にはうつ病の傾向が疑われます。チェックシートの結果のみで正確な診断をすることはできません。結果の如何にかかわらず不安がある場合にはカウンセラーもしくは専門の医師にに相談してください。'
+message = '6点以上の場合にはうつ病の傾向が疑われます。チェックシートの結果のみで正確な診断をすることはできません。結果の如何にかかわらず不安がある場合には、カウンセラーもしくは専門の医師にに相談してください。'
 counseling_link = '[カウンセリング予約サイトのリンク先](https://outlook.office365.com/owa/calendar/Bookings@kyowayakuhin.co.jp/bookings/)'
 medical_link = '[医療機関検索のリンク先](https://www.qlifeweb.jp/utsunoitami/)'
-
-セルフチェックの結果のみで正確に診断することはできません。
-結果の如何にかかわらず不安がある場合には、専門の医師に相談してください。
 
 if total_score>=0 and total_score<=5:
     st.write('あなたのうつ症状は正常です。')
