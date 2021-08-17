@@ -364,6 +364,6 @@ else:
 
 st.write('')
 st.write('')
-st.write('### QIDS-Jの使い方')
-st.write('### 厚生労働省ホームページ「QIDS-J解説」を参考にチャックシートを作成しております')
-st.markdown('#### [厚生労働省ホームページ「QIDS-J解説」](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/kokoro/index.html)')
+st.write('#### ※QIDS-Jの使い方')
+st.write('#### 厚生労働省ホームページ「QIDS-J解説」を参考にチャックシートを作成しております。')
+st.markdown('##### [厚生労働省ホームページ「QIDS-J解説」](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/kokoro/index.html)')
