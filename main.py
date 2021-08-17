@@ -4,6 +4,7 @@ import pandas as pd
 
 st.title('うつ症状チェックシート')
 
+st.subheader('うつ病チェックを簡易抑うつ症状尺度（QIDS -J）を使って行いましょう。')
 st.subheader('設問ごとに、あてはまるもの、近いものをひとつ選択してください。')
 st.write('')
 
@@ -361,5 +362,8 @@ elif total_score>=21 and total_score<=27:
 else:
     st.write('ロジックエラー')
 
-st.write('厚生労働省ホームページ「QIDS-J解説」を参考にチャックシートを作成しております')
-st.markdown('[厚生労働省ホームページ「QIDS-J解説」](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/kokoro/index.html)')
+st.write('')
+st.write('')
+st.write('### QIDS-Jの使い方')
+st.write('### 厚生労働省ホームページ「QIDS-J解説」を参考にチャックシートを作成しております')
+st.markdown('#### [厚生労働省ホームページ「QIDS-J解説」](https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/hukushi_kaigo/shougaishahukushi/kokoro/index.html)')
