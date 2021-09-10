@@ -344,20 +344,12 @@ if total_score>=0 and total_score<=5:
     st.write('あなたのうつ症状は正常です。')
 elif total_score>=6 and total_score<=10:
     st.write('あなたのうつ症状は軽度です。',message)
-    st.markdown(counseling_link)
-    st.markdown(medical_link)
 elif total_score>=11 and total_score<=15:
     st.write('あなたのうつ症状は中等度です。',message)
-    st.markdown(counseling_link)
-    st.markdown(medical_link)
 elif total_score>=16 and total_score<=20:
     st.write('あなたのうつ症状は重度です。',message)
-    st.markdown(counseling_link)
-    st.markdown(medical_link)
 elif total_score>=21 and total_score<=27:
     st.write('あなたのうつ症状はきわけて重度です。',message)
-    st.markdown(counseling_link)
-    st.markdown(medical_link)
 else:
     st.write('ロジックエラー')
 
