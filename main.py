@@ -4,7 +4,7 @@ import pandas as pd
 
 st.title('うつ症状チェックシート')
 
-st.subheader('うつ病チェックを簡易抑うつ症状尺度（QIDS -J）を使って行いましょう。設問ごとに、あてはまるもの、近いものをひとつ選択してください。')
+st.subheader('うつ症状チェックを簡易抑うつ症状尺度（QIDS -J）を使って行いましょう。設問ごとに、あてはまるもの、近いものをひとつ選択してください。')
 st.write('')
 
 question1 = st.radio(
@@ -342,14 +342,19 @@ medical_link = '[医療機関検索のリンク先](https://www.qlifeweb.jp/utsu
 
 if total_score>=0 and total_score<=5:
     st.write('あなたのうつ症状は正常です。')
+    st.write('今後も定期的にセルフチェックをして、自身のうつ症状の状態を確認しましょう。')
 elif total_score>=6 and total_score<=10:
     st.write('あなたのうつ症状は軽度です。',message)
+    st.write(medical_link)
 elif total_score>=11 and total_score<=15:
     st.write('あなたのうつ症状は中等度です。',message)
+    st.write(medical_link)
 elif total_score>=16 and total_score<=20:
     st.write('あなたのうつ症状は重度です。',message)
+    st.write(medical_link)
 elif total_score>=21 and total_score<=27:
     st.write('あなたのうつ症状はきわけて重度です。',message)
+    st.write(medical_link)
 else:
     st.write('ロジックエラー')
 
