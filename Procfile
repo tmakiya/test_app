@@ -1,1 +1,1 @@
-streamlit run main.py
+python dash_app.py
